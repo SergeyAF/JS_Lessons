@@ -11,7 +11,7 @@ function FnLLetters(x) {
   fnlLetter = x[0] + x[x.length - 1];
   return fnlLetter;
 }
-console.log(fnReturn);
+console.log(FnLLetters(string));
 
 // 2.  Сделать первую и последнюю буквы в верхнем регистре
 
@@ -27,21 +27,22 @@ console.log(string.indexOf('string'));
 
 // 4. Найти положение второго пробела (“вручную” ничего не считать)
 
-function sapceFinder (x = String, counter = 1 ) {
+function sapceFinder (element, x, counter = 1 ) {
   let finder, lastIndex = 0;
   for (let index = 0; index < counter; index++) {
-    finder = x.indexOf(' ', lastIndex);
+    finder = x.indexOf(element, lastIndex);
     lastIndex = finder + 1;
   }
   return finder;
 }
 
-console.log(sapceFinder(string, 2));
-console.log(sapceFinder(string));
+console.log(sapceFinder(' ', string, 2));
+console.log(sapceFinder(' ', string));
+console.log(sapceFinder('t', string, 2));
 
 // 5. Получить строку с 5-го символа длиной 4 буквы
 
-function slicer1(x, start = Number, length = Number) {
+function slicer1(x, start, length = Number) {
   let slicedString = x;
   slicedString = slicedString.slice(start, start + length);
   return slicedString;
@@ -62,7 +63,7 @@ console.log(string.slice(0, -6));
 
 let a = 20;
 let b = 16;
-console.log(String(a) + b);
+console.log(String(a) + String(b));
 
 // Занятие 1 слайд 13
 // 1. Получить число pi из Math и округлить его до 2-х знаков после точки
@@ -116,7 +117,7 @@ true + undefined  // NaN undefined не являестя числом
 
 let z = 'hidden';
 
-if (z=='hidden') {
+if (z==='hidden') {
   z='visible';
 } else { z='hidden';}
 console.log(z);
