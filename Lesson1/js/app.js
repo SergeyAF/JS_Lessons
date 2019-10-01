@@ -42,7 +42,7 @@ console.log(sapceFinder('t', string, 2));
 
 // 5. Получить строку с 5-го символа длиной 4 буквы
 
-function slicer1(x, start, length = Number) {
+function slicer1(x, start, length) {
   let slicedString = x;
   slicedString = slicedString.slice(start, start + length);
   return slicedString;
