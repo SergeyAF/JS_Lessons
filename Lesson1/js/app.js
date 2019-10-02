@@ -1,10 +1,9 @@
 let string = "some test string";
-let fnReturn = "";
 
 // Занятие 1 слайд 10
 console.log(string);
 // 1. Получить первую и последнюю буквы строки
-fnReturn = FnLLetters(string);
+let fnReturn = FnLLetters(string);
 
 function FnLLetters(x) {
   let fnlLetter = "";
