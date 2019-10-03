@@ -88,7 +88,17 @@ function UpperCaseLetters(string) {
     }
     return ouputString;
 }
+
+function stringRecompillerUpperCase(string) {
+    let arrayString = string.split(' ');
+    for (let i = 0; i < arrayString.length; i++) {
+        arrayString[i] = arrayString[i][0].toUpperCase() + arrayString[i].slice(1, arrayString[i].length);
+    }
+    return (arrayString.join(' '));
+}
+
 console.log(UpperCaseLetters(easycodeString));
+console.log(stringRecompillerUpperCase(easycodeString));
 
 // 2. Дана строка “tseb eht ma i”. Используя циклы, сделать строку-перевертыш (то есть последняя буква становится первой, предпоследняя - второй итд).
 const baseString = 'tseb eht ma i';
