@@ -145,3 +145,47 @@ getStrinFromIdexArray = (array => {
 console.log(getStrinFromIdexArray(randomIndexArray));
 
 
+// 1.Отсортируйте массив массивов так, чтобы вначале располагались наименьшие массивы (размер массива определяется его длиной): 
+const someArray = [  [14, 45],  [1],  ['a', 'c', 'd']  ];
+
+arraySorter = (array => array.sort((a,b) => {
+    return a.length - b.length;
+}));
+console.log(arraySorter(someArray));
+
+
+// 2. Есть массив объектов:
+const cpuArray =[
+    {cpu: 'intel', info: {cores:2, сache: 3}},
+    {cpu: 'intel', info: {cores:4, сache: 4}},
+    {cpu: 'amd', info: {cores:1, сache: 1}},
+    {cpu: 'intel', info: {cores:3, сache: 2}},
+    {cpu: 'amd', info: {cores:4, сache: 2}}
+];
+//Отсортировать их по возрастающему количеству ядер (cores).
+
+sortByCores = (array => array.sort((a,b) => {
+    return a.info.cores - b.info.cores;
+}))
+console.log(sortByCores(cpuArray));
+
+//3. Создать функцию, которая будет принимать массив продуктов и две цены. Функция должна вернуть все продукты, цена которых находится в указанном диапазоне, и сортировать от дешевых к дорогим:
+
+let products = [
+    {title: 'prod1', price: 5.2}, {title: 'prod2', price: 0.18},
+    {title: 'prod3', price: 15}, {title: 'prod4', price: 25},
+    {title: 'prod5', price: 18.9}, {title: 'prod6', price: 8},
+    {title: 'prod7', price: 19}, {title: 'prod8', price: 63}
+];
+
+getFilterByPrice = ((array, lowPrice, highPrice) => {
+    const filteredArray = array.filter((array) => {
+        return (array.price >= lowPrice && array.price <= highPrice)
+    });
+    return filteredArray.sort((a,b) => {
+        return a.price - b.price;
+    })
+});
+
+console.log(getFilterByPrice(products, 8, 40));
+//filterCollection(products, 15, 30) → [{...price: 15}, {...price: 18.9}, {...price: 19}, {...price: 25}]
