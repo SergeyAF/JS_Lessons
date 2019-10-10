@@ -179,8 +179,8 @@ let products = [
 ];
 
 getFilterByPrice = ((array, lowPrice, highPrice) => {
-    const filteredArray = array.filter((array) => {
-        return (array.price >= lowPrice && array.price <= highPrice)
+    const filteredArray = array.filter((item) => {
+        return (item.price >= lowPrice && item.price <= highPrice)
     });
     return filteredArray.sort((a,b) => {
         return a.price - b.price;
