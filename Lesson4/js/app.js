@@ -72,7 +72,7 @@ console.log(arrayModificator(arrayToReverse, reverseString));
 const randomArray = [1, 6, 2, 9, 1, 0, 4, 6];
 const randomArray2 = [6, 8, 9, 10, 12, 8, 6];
 
-function likeEver(array, fnCallback) {
+function likeEvery(array, fnCallback) {
     if (Array.isArray(array) === true){
         if (typeof fnCallback === 'function'){
             const newArray = [];
@@ -89,10 +89,9 @@ function likeEver(array, fnCallback) {
         return 'Передан не массив';
     }
 }
-moreThanFive = (value) => {
-    return value > 5 ? true : false ;
-}
-console.log(likeEver(randomArray, moreThanFive));
+moreThanFive = value => value > 5 ? true : false;
+
+console.log(likeEvery(randomArray, moreThanFive));
 
 
 //1. На основе массива [1,2,3,5,8,9,10] сформировать новый массив,каждый элемент которого будет хранить информацию о числе и его четности:
@@ -100,7 +99,7 @@ console.log(likeEver(randomArray, moreThanFive));
 
 const arrayForMap = [1,2,3,5,8,9,10]
 
-checkOddArray = (array => array.map((value) => {
+checkOddArray = (array => array.map(value => {
     let oddValue = value % 2 === 0 ? 0 : 1;
     return {digit: value, odd: oddValue};
 }));
@@ -110,17 +109,13 @@ console.log(checkOddArray(arrayForMap));
 
 const arrayForCheck = [12, 4, 50, 1, 0, 18, 40];
 
-checkForZerro = (array => array.every(value => {
-    return value !== 0;
-}));
+checkForZerro = (array => array.every(value => value !== 0));
 console.log(checkForZerro(arrayForCheck));
 
 //3. Проверить, содержит ли массив ['yes', 'hello', 'no', 'easycode', 'what'] хотя бы одно слово длиной больше 3х букв. Если да - вернуть true
 const WordsArray = ['yes', 'hello', 'no', 'easycode', 'what'];
 
-chechArrayLength = (array => array.some(value => {
-    return value.length > 3;
-}))
+chechArrayLength = (array => array.some(value => value.length > 3))
 console.log(chechArrayLength(WordsArray));
 
 //4/ Дан массив объектов, где каждый объект содержит информацию о букве и месте её положения в строке {буква: “a”, позиция_в_предложении: 1}:
@@ -141,18 +136,13 @@ getStrinFromIdexArray = (array => {
         return str + value.char;
     }, ''))
 });
-
 console.log(getStrinFromIdexArray(randomIndexArray));
 
-
 // 1.Отсортируйте массив массивов так, чтобы вначале располагались наименьшие массивы (размер массива определяется его длиной): 
-const someArray = [  [14, 45],  [1],  ['a', 'c', 'd']  ];
+const someArray = [[14, 45], [1], ['a', 'c', 'd'] ];
 
-arraySorter = (array => array.sort((a,b) => {
-    return a.length - b.length;
-}));
+arraySorter = (array => array.sort((a,b) => a.length - b.length));
 console.log(arraySorter(someArray));
-
 
 // 2. Есть массив объектов:
 const cpuArray =[
@@ -164,9 +154,7 @@ const cpuArray =[
 ];
 //Отсортировать их по возрастающему количеству ядер (cores).
 
-sortByCores = (array => array.sort((a,b) => {
-    return a.info.cores - b.info.cores;
-}))
+sortByCores = (array => array.sort((a,b) => a.info.cores - b.info.cores))
 console.log(sortByCores(cpuArray));
 
 //3. Создать функцию, которая будет принимать массив продуктов и две цены. Функция должна вернуть все продукты, цена которых находится в указанном диапазоне, и сортировать от дешевых к дорогим:
@@ -179,13 +167,8 @@ let products = [
 ];
 
 getFilterByPrice = ((array, lowPrice, highPrice) => {
-    const filteredArray = array.filter((item) => {
-        return (item.price >= lowPrice && item.price <= highPrice)
-    });
-    return filteredArray.sort((a,b) => {
-        return a.price - b.price;
-    })
+    const filteredArray = array.filter(item => (item.price >= lowPrice && item.price <= highPrice));
+    return filteredArray.sort((a,b) => a.price - b.price)
 });
-
 console.log(getFilterByPrice(products, 8, 40));
 //filterCollection(products, 15, 30) → [{...price: 15}, {...price: 18.9}, {...price: 19}, {...price: 25}]
