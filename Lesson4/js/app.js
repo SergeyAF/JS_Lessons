@@ -89,7 +89,7 @@ function likeEvery(array, fnCallback) {
         return 'Передан не массив';
     }
 }
-moreThanFive = value => value > 5 ? true : false;
+moreThanFive = value => value > 5;
 
 console.log(likeEvery(randomArray, moreThanFive));
 
@@ -100,8 +100,7 @@ console.log(likeEvery(randomArray, moreThanFive));
 const arrayForMap = [1,2,3,5,8,9,10]
 
 checkOddArray = (array => array.map(value => {
-    let oddValue = value % 2 === 0 ? 0 : 1;
-    return {digit: value, odd: oddValue};
+    return {digit: value, odd: value % 2};
 }));
 console.log(checkOddArray(arrayForMap));
 
