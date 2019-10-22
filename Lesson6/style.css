@@ -1,0 +1,41 @@
+.tab {
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+}
+.btn {
+    padding: 3px 10px;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
+/* .cars {
+    background-color: green;
+}
+
+.hotels {
+    background-color: grey;
+}
+
+.flights {
+    background-color: greenyellow;
+} */
+
+.show {
+    display: block;
+    border: 1px solid grey;
+}
+
+.bordered {
+    background-color: #eee;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
