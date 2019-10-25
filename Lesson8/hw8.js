@@ -71,7 +71,6 @@ class StringModifier {
         return this.ouputStr.length;
     };
     reverseString() {
-        let reverse = '';
         this.ouputStr = Array.from(this.ouputStr).reverse().join('');
     };
 };
