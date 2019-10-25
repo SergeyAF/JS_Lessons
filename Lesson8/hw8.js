@@ -6,9 +6,9 @@ console.log('--------- Задача 1 ---------');
 //minus()(6); // -6
 //minus()(); // 0
 
-function minus(valA = 0) {
-    return function (valB = 0) {
-        return valA -= valB;
+function minus(firsValue = 0) {
+    return function (secondValue = 0) {
+        return firsValue -= secondValue;
     };
 };
 
@@ -29,7 +29,6 @@ console.log('--------- Задача 2 ---------');
 
 function multiplyMaker(initValue) {
     let result = initValue;
-    console.log(result);
     return function (value) {
         return result *= value;
     }
@@ -66,26 +65,23 @@ class StringModifier {
         };
     };
     getString() {
-        console.log(this.ouputStr);
+        return this.ouputStr;
     };
     getLength() {
-        console.log(this.ouputStr.length);
+        return this.ouputStr.length;
     };
     reverseString() {
         let reverse = '';
-        for (let i = this.ouputStr.length - 1; i > -1; i--) {
-            reverse += this.ouputStr[i];
-        };
-        this.ouputStr = reverse;
+        this.ouputStr = Array.from(this.ouputStr).reverse().join('');
     };
 };
 
 someString = new StringModifier();
 someString.setString('Hello MY Firend');
-someString.getString();
-someString.getLength();
+console.log(someString.getString());
+console.log(someString.getLength());
 someString.reverseString();
-someString.getString();
+console.log(someString.getString());
 
 console.log('--------- Задача 4 ---------');
 
