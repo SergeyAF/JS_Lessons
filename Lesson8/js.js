@@ -50,7 +50,7 @@ class Slider {
     }
     goBack() {
         if (this.currentImg === 0) {
-            this.currentImg = this.images.length -1;
+            this.currentImg = this.images.length - 1;
         } else {
             this.currentImg -= 1;
         }
@@ -62,5 +62,5 @@ class Slider {
     }
 }
 
-const mySlider = new Slider ('#slider', imgs)
+const mySlider = new Slider('#slider', imgs)
 setTimeout(mySlider.dectruct, 5000);

@@ -54,33 +54,33 @@ console.log('--------- Задача 3 ---------');
 //модуль.получитьСтроку(); // ‘abcde’
 //модуль.получитьДлину(); // 5
 
-class stringModifier {
-    constructor () {
+class StringModifier {
+    constructor() {
         this.ouputStr = '';
     };
-    setString (stringValue) {
+    setString(stringValue) {
         if (stringValue === undefined) {
             this.ouputStr;
         } else {
             this.ouputStr = stringValue.toString();
         };
     };
-    getString () {
+    getString() {
         console.log(this.ouputStr);
     };
-    getLength () {
+    getLength() {
         console.log(this.ouputStr.length);
     };
     reverseString() {
         let reverse = '';
         for (let i = this.ouputStr.length - 1; i > -1; i--) {
             reverse += this.ouputStr[i];
-            };
+        };
         this.ouputStr = reverse;
     };
 };
 
-someString = new stringModifier ();
+someString = new StringModifier();
 someString.setString('Hello MY Firend');
 someString.getString();
 someString.getLength();
@@ -102,19 +102,19 @@ console.log('--------- Задача 4 ---------');
 calculator = function () {
     let result = 0;
     return {
-        setValue: function(value) {
+        setValue: function (value) {
             result = value;
             return this;
         },
-        reset: function() {
-                result = 0;
-                return this;
-            },
-        getResult: function() {
-                console.log(result.toFixed(2));
-                return this;
+        reset: function () {
+            result = 0;
+            return this;
         },
-        plus: function(value) {
+        getResult: function () {
+            console.log(result.toFixed(2));
+            return this;
+        },
+        plus: function (value) {
             result += value;
             return this;
         },
@@ -122,11 +122,11 @@ calculator = function () {
             result -= value;
             return this;
         },
-        multiply: function(value) {
+        multiply: function (value) {
             result *= value;
             return this;
         },
-        pow: function(value) {
+        pow: function (value) {
             result = Math.pow(result, value);
             return this;
         },
