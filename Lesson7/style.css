@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    line-height: 1;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.usr_table {
+    width: 100%;
+}
+
+.usr_table tr {
+    
+}
+
+.usr_table td {
+    padding: 15px;
+    border-bottom: 1px solid #aaa;
+}
+.usr_table tr:last-child td {
+    border-bottom: none;
+}
+
+.bold {
+    font-weight: bold;
+}
