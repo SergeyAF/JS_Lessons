@@ -24,13 +24,13 @@ btn.addEventListener('click', () => {
     if (inputLogin.value === ''){ 
         return console.log('Поле Login не должно быть пустым')
     };
-    if ((inputPass.value.length < 9)){
+
+    if ((inputPass.value.length < 9)||(!inputPass.value.match(/[A-ZА-Я]/))||(!inputPass.value.match(/[a-zа-я]/))||!inputPass.value.match( /\d/ )){
         return console.log('Введен неподходящий пароль. Пароль должен соответствовать критериям: больше 8-ми символов, должна быть цифра, буква, большая буква')
     };
     if (!checkbox.checked) {
         return console.log('Не приняты Условия соглашения');
     };
     return console.log('Все Хорошо');
-    
 })
 
