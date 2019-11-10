@@ -5,8 +5,8 @@ class Service {
         this.apiUrl = 'https://newsapi.org/v2/'
         this.country = '';
         this.category = '';
-        this.search = '';
-        this.sortBy = '';
+        this.search = search;
+        this.sort = '';
         this.fromDate = '';
         this.toDate = '';
     }
@@ -17,11 +17,14 @@ class Service {
             .then(response => response.json())
     }
     sendSearchReqest({ search = '', sort = '', fromDate = '', toDate = '' }) {
-        search !== '' ? this.search = search : this.search;
-        sort !== '' ? this.sortBy = sort : this.sortBy;
-        fromDate !== '' ? this.fromDate = fromDate : this.fromDate;
-        toDate !== '' ? this.toDate = toDate : this.toDate;
-        return fetch(`${this.apiUrl}everything?q=${this.search}&from=${this.fromDate}&to=${this.toDate}&sortBy=${this.sortBy}&apiKey=${this.apiKey}`)
+        for (const key in arguments) {
+            for (const ar in arguments[key]) {
+                if (arguments[key][ar] !== '') {
+                    this[ar] = arguments[key][ar]
+                };
+            };
+        };
+        return fetch(`${this.apiUrl}everything?q=${this.search}&from=${this.fromDate}&to=${this.toDate}&sortBy=${this.sort}&apiKey=${this.apiKey}`)
             .then(response => response.json())
     }
 }
