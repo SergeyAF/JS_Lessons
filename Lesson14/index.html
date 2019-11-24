@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Whack a mole! <span class="score"></span></h1>
+    <div class="options_wrapper input_label">
+      <label for="nameInput"
+        >Enter Your Name:
+        <input type="text" id="nameInput" />
+      </label>
+      <span class="name_warning"><= Enter Your Name here</span>
+      <button class="btn btn_start al-c">Start Game!</button>
+    </div>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+    </div>
+    <div class="options_wrapper">
+      <button class="btn hScore_btn">High Score</button>
+      <div class="label_wrap d-f fw-w">
+        <label for="selDifficulty">Difficulty level:</label>
+        <select name="difLevel" id="selDifficulty">
+          <option value="Easy">Easy</option>
+          <option value="Normal">Normal</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+    </div>
+    <div id="result_window" class="modal_container d-n">
+      <div class="modal_window result-window">
+        <h2>Game Over</h2>
+        <div class="result_wrapper">
+          <span
+            >You hit <span class="result_score">0</span> out of
+            <span class="mole_counter">0</span> moles</span
+          >
+        </div>
+        <button class="btn btn_result-close al-c">Close</button>
+      </div>
+    </div>
+    <div id="high_score" class="modal_container d-n">
+      <div class="modal_window high_score-window">
+        <h2>High score</h2>
+        <div class="hScore_content"></div>
+        <button class="btn btn_hScore-close al-c">Close</button>
+      </div>
+    </div>
+
+    <script src="js.js"></script>
+  </body>
+</html>
