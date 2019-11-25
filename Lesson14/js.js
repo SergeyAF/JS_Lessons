@@ -121,7 +121,6 @@ function finishGame() {
     list.shift();
   }
   localStorage.setItem("highScore", JSON.stringify(list));
-  currentName.value = "";
   renderHighScore(list);
 }
 

@@ -134,6 +134,7 @@ header h1 {
   width: calc(100% / 5);
   margin-bottom: 15px;
   position: relative;
+  z-index: 1;
 }
 
 .item-wrapper::before {
@@ -148,6 +149,7 @@ header h1 {
   bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  z-index: -1;
 }
 
 .item-wrapper:hover::before {
