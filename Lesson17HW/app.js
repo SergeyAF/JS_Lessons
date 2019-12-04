@@ -1,3 +1,5 @@
+
+
 class API {
   constructor() {
     this.apiUrl = "http://localhost:3000";
@@ -123,3 +125,7 @@ class FormUI {
 
 const ui = new UI();
 ui.init();
+
+
+flatpickr('#invoice_date', {dateFormat: 'd-m-Y'});
+flatpickr('#supply_date', {dateFormat: 'd-m-Y'});
