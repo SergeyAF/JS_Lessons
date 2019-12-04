@@ -1,0 +1,268 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.ttf') format('truetype'),
+        url('fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+body {
+  padding: 30px 15px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  white-space: pre;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  color: #777e94;
+  padding: 0 18px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #353635;
+  margin-bottom: 9px;
+}
+
+
+
+.container {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f1f2f6;
+  padding: 40px 37px 42px 27px;
+}
+
+.container_header {
+  margin-bottom: 36px;
+}
+
+.v_line {
+  width: 6px;
+  height: 48px;
+  background-color: #e3e5e8;
+}
+
+.h_line {
+  width: 100%;
+  height: 1px;
+  background-color: #e3e5e8;
+}
+
+.wrapper {
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  margin-bottom: 36px;
+  padding: 29px 24px 25px 24px;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #5566fe;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 14px 31px 11px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #5566fe;
+  border: 1px solid #5566fe;
+}
+
+
+.modal_form {
+  position: absolute;
+  width: 100%;
+  max-width: 950px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal_wrapper {
+  display: none;
+}
+.modal_wrapper::before{
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.invoices_data {
+  width: 100%;
+  font-weight: 600;
+  border-spacing: 0;
+}
+
+.invoices_data th {
+  width: 25%;
+  padding: 10px 18px;
+  color: #777e94;
+  text-align: left;
+}
+.invoices_data th:first-child {
+  border-top-left-radius: 5px;
+}
+.invoices_data th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.invoices_data td {
+  padding: 10px 18px;
+  color: #8a8a8a;
+  border-bottom: 1px solid #e3e5e8;
+}
+.invoices_data tr {
+  height: 60px;
+}
+.invoices_data tr:first-child {
+  background-color: #f1f2f6;
+}
+
+.inv {
+  color: #6071fe;
+}
+
+.create_invoice {
+  border: 1px solid #e3e5e8;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.input_wrapper {
+  position: relative;
+  padding-right: 20px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #5c5c5c;
+}
+
+.input_wrapper label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.input_wrapper input {
+  color: #667;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 14px;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+.input_wrapper input::placeholder {
+  color: #bebebe;
+  font-weight: 400;
+}
+
+.input_wrapper input:focus{
+  border: 1px solid #dfdfdf;
+}
+
+
+.input_wrapper .icon {
+  color: #686868;
+  font-size: 18px;
+  background-color: #fafafa;
+  text-align: center;
+  line-height: 38px;
+  position: absolute;
+  font-family: icomoon, sans-serif;
+  height: 40px;
+  width: 40px;
+  right: 20px;
+  top: 34px;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.input_wrapper .icon_gear:hover {
+  color: #6071fe;
+}
+
+.datepicker {
+  cursor: pointer;
+}
+
+.input_wrapper .icon_date {
+  background-color: transparent;
+  border: none;
+  color: #dddddd;
+}
+
+.error_msg {
+  position: absolute;
+  color: darkred;
+  bottom: -25px;
+  left: 14px;
+  font-size: 14px;
+}
+
+.fl-r{
+  float: right;
+}
+
+.d-f {
+  display: flex;
+}
+.fw-w {
+  flex-wrap: wrap;
+}
+.ai-c {
+  align-items: center;
+}
+
+.col_2 {
+  width: 50%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.d-b {
+ display: block;
+}
+
+#comment_input {
+  height: 80px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  color: #667;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 14px;
+  outline: none;
+  resize: none;
+}
