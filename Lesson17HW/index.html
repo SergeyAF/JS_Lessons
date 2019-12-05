@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Invoices API</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_header d-f ai-c">
+        <div class="v_line"></div>
+        <h1>Invoices</h1>
+        <div class="h_line"></div>
+      </div>
+      <div class="actions wrapper">
+        <h2>Actions</h2>
+        <button name="open_add_modal" class="btn">Add new</button>
+      </div>
+      <div class="invoices wrapper">
+        <h2>Invoices</h2>
+        <table class="invoices_data">
+          <tbody class="content">
+            <tr>
+              <th>Create</th>
+              <th>No</th>
+              <th>Supply</th>
+              <th>Comment</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal_wrapper">
+      <div class="container modal_form">
+      <div class="container_header d-f ai-c">
+        <div class="v_line"></div>
+        <h1>Create Invoice</h1>
+        <div class="h_line"></div>
+      </div>
+      <div class="wrapper">
+        <form class="create_invoice d-f fw-w">
+          <div class="col_2 input_wrapper">
+            <label for="number_input">Number:</label>
+            <input id="number_input" type="text" class="w100"/>
+            <div class="icon icon_gear">&#xe901</div>
+            <div class="error_msg"></div>
+          </div>
+          <div class="col_2 input_wrapper">
+            <label for="invoice_date">Invoice Date:</label>
+            <input id="invoice_date" type="text" placeholder="Select Date" class="w100 datepicker"/>
+            <div class="icon icon_date">&#xe900</div>
+          </div>
+          <div class="col_2 input_wrapper">
+            <label for="supply_date">Supply Date:</label>
+            <input id="supply_date" type="text" placeholder="Select Date" class="w100 datepicker"/>
+            <div class="icon icon_date">&#xe900</div>
+          </div>
+          <div class="w100 input_wrapper">
+            <label for="comment_input">Comment:</label>
+            <textarea id="comment_input" class="w100"></textarea>
+          </div>
+        </form>
+        <button id="cancel_invoice" class="btn">Close</button>
+        <button id="create_new_invoice" class="btn fl-r">Save</button>
+      </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
